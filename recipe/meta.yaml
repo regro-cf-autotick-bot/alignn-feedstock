@@ -1,5 +1,5 @@
 {% set name = "alignn" %}
-{% set version = "2026.8.11" %}
+{% set version = "2026.10.11" %}
 {% set python_min = python_min | default("3.10") %}
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://github.com/atomgptlab/alignn/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d71fcd63e82d42d7cfda14fa5df05b77fb99572d7c114c19dc5b26d45c901131
+  sha256: c3265328230a1a3f995feb5be34df581106670f2564a60fc08cbea2201c4b065
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
